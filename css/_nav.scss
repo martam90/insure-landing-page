@@ -1,0 +1,53 @@
+.wrapper {
+    max-width: 375px;
+}
+
+
+.nav {
+    display: flex;
+    flex-direction: column;
+
+    .nav__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $spacing + 15;
+
+        .nav__toggle {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+
+    .nav__list {
+        display: none;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        background-color: $verydark;
+
+        .nav__item {
+            padding: $spacing + 10 0;
+            text-align: center;
+            flex: 1;
+
+            .nav__link {
+                color: white;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .nav__pattern {
+        display: none;
+        background-color: $verydark;
+        height: 218px;
+        background-image: url("../images/bg-pattern-mobile-nav.svg");
+        background-repeat: no-repeat;
+        background-position: bottom left;
+    }
+}

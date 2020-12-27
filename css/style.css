@@ -22,4 +22,73 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "DM Serif Display", serif;
 }
+
+.wrapper {
+  max-width: 375px;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.nav .nav__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 35px;
+}
+
+.nav .nav__top .nav__toggle {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.nav .nav__list {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: #2b272f;
+}
+
+.nav .nav__list .nav__item {
+  padding: 30px 0;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.nav .nav__list .nav__item .nav__link {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav .nav__pattern {
+  display: none;
+  background-color: #2b272f;
+  height: 218px;
+  background-image: url("../images/bg-pattern-mobile-nav.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
 /*# sourceMappingURL=style.css.map */
