@@ -1,0 +1,48 @@
+.jumbotron {
+    background-color: $darkviolet;
+    text-align: center;
+
+    .jumbotron__detail {
+        position: relative;
+        padding: $spacing + 80 $spacing + 15;
+
+        .pattern--top-left {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .pattern--bottom-right {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: translateY(50%);
+        }
+    }
+
+    .heading--large {
+        color: white;
+        letter-spacing: 2px;
+        margin: 0;
+        font-size: $fontsize + 16;
+    }
+
+    .text--greyish {
+        color: $lightgray;
+        opacity: 0.7;
+        line-height: 1.8;
+    }
+
+    .jumbotron__button {
+        margin-top: $spacing;
+        display: inline-block;
+        border: 2px solid white;
+        padding: $spacing - 5;
+        outline: none;
+        text-transform: uppercase;
+        cursor: pointer;
+        background-color: inherit;
+        color: white;
+        font-family: $ffamily;
+    }
+}

@@ -1,0 +1,42 @@
+.icons {
+    padding: $spacing + 80 $spacing + 15;
+    text-align: center;
+
+    .icons__heading {
+        position: relative;
+    }
+
+    .heading--large {
+        letter-spacing: 2px;
+        margin: 0;
+        font-size: $fontsize + 16;
+        padding-bottom: $spacing + 30;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: -50%;
+            transform: translateX(-50%);
+            background-color: $grayishviolet;
+            width: 100px;
+            height: 1px;
+        }
+    }
+
+    .icons__item {
+        display: block;
+        margin-bottom: $spacing;
+        padding: $spacing;
+
+        .heading--medium {
+            letter-spacing: 2px;
+        }
+
+        .text--grey {
+            color: $grayishviolet;
+            line-height: 1.8;
+        }
+    }
+}
+

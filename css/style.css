@@ -58,7 +58,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav .nav__list {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -83,12 +85,96 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 }
 
-.nav .nav__pattern {
-  display: none;
-  background-color: #2b272f;
-  height: 218px;
-  background-image: url("../images/bg-pattern-mobile-nav.svg");
-  background-repeat: no-repeat;
-  background-position: bottom left;
+.jumbotron {
+  background-color: #2d2640;
+  text-align: center;
+}
+
+.jumbotron .jumbotron__detail {
+  position: relative;
+  padding: 100px 35px;
+}
+
+.jumbotron .jumbotron__detail .pattern--top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.jumbotron .jumbotron__detail .pattern--bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+.jumbotron .heading--large {
+  color: white;
+  letter-spacing: 2px;
+  margin: 0;
+  font-size: 32px;
+}
+
+.jumbotron .text--greyish {
+  color: #fafafa;
+  opacity: 0.7;
+  line-height: 1.8;
+}
+
+.jumbotron .jumbotron__button {
+  margin-top: 20px;
+  display: inline-block;
+  border: 2px solid white;
+  padding: 15px;
+  outline: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: inherit;
+  color: white;
+  font-family: "Karla", sans-serif;
+}
+
+.icons {
+  padding: 100px 35px;
+  text-align: center;
+}
+
+.icons .icons__heading {
+  position: relative;
+}
+
+.icons .heading--large {
+  letter-spacing: 2px;
+  margin: 0;
+  font-size: 32px;
+  padding-bottom: 50px;
+}
+
+.icons .heading--large:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #837d87;
+  width: 100px;
+  height: 1px;
+}
+
+.icons .icons__item {
+  display: block;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.icons .icons__item .heading--medium {
+  letter-spacing: 2px;
+}
+
+.icons .icons__item .text--grey {
+  color: #837d87;
+  line-height: 1.8;
 }
 /*# sourceMappingURL=style.css.map */
