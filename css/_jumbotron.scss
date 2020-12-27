@@ -33,5 +33,13 @@
 
     .jumbotron__button {
         @include whitebutton;
+
+        &:hover {
+            @include activebutton;
+        }
+
+        &:focus {
+            outline: 1px dotted white;
+        }
     }
 }

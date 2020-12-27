@@ -38,4 +38,13 @@ $spacing: 20px;
     background-color: inherit;
     color: white;
     font-family: $ffamily;
+    transition: all ease-in-out 500ms;
+}
+
+@mixin activebutton {
+    transition: all ease-in-out 500ms;
+    background-color: white;
+    cursor: pointer;
+    color: $darkviolet;
+    font-weight: 700;
 }

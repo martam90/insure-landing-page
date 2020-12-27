@@ -134,10 +134,25 @@ h1, h2, h3, h4, h5, h6 {
   background-color: inherit;
   color: white;
   font-family: "Karla", sans-serif;
+  -webkit-transition: all ease-in-out 500ms;
+  transition: all ease-in-out 500ms;
+}
+
+.jumbotron .jumbotron__button:hover {
+  -webkit-transition: all ease-in-out 500ms;
+  transition: all ease-in-out 500ms;
+  background-color: white;
+  cursor: pointer;
+  color: #2d2640;
+  font-weight: 700;
+}
+
+.jumbotron .jumbotron__button:focus {
+  outline: 1px dotted white;
 }
 
 .icons {
-  padding: 35px;
+  padding: 60px 35px;
   text-align: center;
 }
 
@@ -156,7 +171,7 @@ h1, h2, h3, h4, h5, h6 {
   content: "";
   position: absolute;
   left: 50%;
-  top: -50%;
+  top: -20%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   background-color: #837d87;
@@ -210,6 +225,21 @@ h1, h2, h3, h4, h5, h6 {
   background-color: inherit;
   color: white;
   font-family: "Karla", sans-serif;
+  -webkit-transition: all ease-in-out 500ms;
+  transition: all ease-in-out 500ms;
+}
+
+.about .about__content .about__button:hover {
+  -webkit-transition: all ease-in-out 500ms;
+  transition: all ease-in-out 500ms;
+  background-color: white;
+  cursor: pointer;
+  color: #2d2640;
+  font-weight: 700;
+}
+
+.about .about__content .about__button:focus {
+  outline: 1px dotted white;
 }
 
 footer {
@@ -259,6 +289,10 @@ footer .footer__icons .icon__list .icon__img {
   margin: 0;
 }
 
+footer .footer__icons .icon__list .icon__img:hover {
+  cursor: pointer;
+}
+
 footer .footer__menu {
   padding-bottom: 20px;
 }
@@ -289,6 +323,14 @@ footer .footer__menu .footer__list .footer__link {
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+footer .footer__menu .footer__list .footer__link:hover {
+  text-decoration: underline;
+}
+
+footer .footer__menu .footer__list .footer__link:focus {
+  outline: 1px dotted black;
 }
 
 footer .attribution {

@@ -1,5 +1,5 @@
 .icons {
-    padding: $spacing + 15;
+    padding: $spacing + 40 $spacing + 15;
     text-align: center;
 
     .icons__heading {
@@ -14,7 +14,7 @@
             content: "";
             position: absolute;
             left: 50%;
-            top: -50%;
+            top: -20%;
             transform: translateX(-50%);
             background-color: $grayishviolet;
             width: 100px;
