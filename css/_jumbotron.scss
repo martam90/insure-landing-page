@@ -21,10 +21,8 @@
     }
 
     .heading--large {
+        @include headinglarge;
         color: white;
-        letter-spacing: 2px;
-        margin: 0;
-        font-size: $fontsize + 16;
     }
 
     .text--greyish {
@@ -34,15 +32,6 @@
     }
 
     .jumbotron__button {
-        margin-top: $spacing;
-        display: inline-block;
-        border: 2px solid white;
-        padding: $spacing - 5;
-        outline: none;
-        text-transform: uppercase;
-        cursor: pointer;
-        background-color: inherit;
-        color: white;
-        font-family: $ffamily;
+        @include whitebutton;
     }
 }

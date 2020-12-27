@@ -1,15 +1,13 @@
 .icons {
-    padding: $spacing + 80 $spacing + 15;
+    padding: $spacing + 15;
     text-align: center;
 
     .icons__heading {
         position: relative;
     }
 
-    .heading--large {
-        letter-spacing: 2px;
-        margin: 0;
-        font-size: $fontsize + 16;
+    .heading--large--black {
+        @include headinglarge;
         padding-bottom: $spacing + 30;
 
         &:before {

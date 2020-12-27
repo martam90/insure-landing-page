@@ -1,0 +1,27 @@
+.about {
+    padding: $spacing + 60 $spacing + 15;
+    text-align: center;
+
+
+    .about__content {
+        padding: $spacing + 30;
+        background-color: $darkviolet;
+        background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+        background-repeat: no-repeat;
+        background-position: top right;
+
+        .heading--large {
+            color: white;
+            letter-spacing: 2px;
+            margin: 0;
+            font-size: $fontsize + 16;
+        }
+    
+        .about__button {
+            @include whitebutton;
+        }
+    }
+    
+
+    
+}

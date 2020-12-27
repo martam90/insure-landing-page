@@ -2,6 +2,7 @@
 /* body */
 /* colors */
 /* spacing */
+/* mixin heading large */
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -110,10 +111,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .jumbotron .heading--large {
-  color: white;
   letter-spacing: 2px;
   margin: 0;
   font-size: 32px;
+  color: white;
 }
 
 .jumbotron .text--greyish {
@@ -136,7 +137,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .icons {
-  padding: 100px 35px;
+  padding: 35px;
   text-align: center;
 }
 
@@ -144,14 +145,14 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-.icons .heading--large {
+.icons .heading--large--black {
   letter-spacing: 2px;
   margin: 0;
   font-size: 32px;
   padding-bottom: 50px;
 }
 
-.icons .heading--large:before {
+.icons .heading--large--black:before {
   content: "";
   position: absolute;
   left: 50%;
@@ -176,5 +177,38 @@ h1, h2, h3, h4, h5, h6 {
 .icons .icons__item .text--grey {
   color: #837d87;
   line-height: 1.8;
+}
+
+.about {
+  padding: 80px 35px;
+  text-align: center;
+}
+
+.about .about__content {
+  padding: 50px;
+  background-color: #2d2640;
+  background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.about .about__content .heading--large {
+  color: white;
+  letter-spacing: 2px;
+  margin: 0;
+  font-size: 32px;
+}
+
+.about .about__content .about__button {
+  margin-top: 20px;
+  display: inline-block;
+  border: 2px solid white;
+  padding: 15px;
+  outline: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: inherit;
+  color: white;
+  font-family: "Karla", sans-serif;
 }
 /*# sourceMappingURL=style.css.map */
