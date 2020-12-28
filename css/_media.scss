@@ -1,0 +1,72 @@
+@media (min-width: 700px) {
+    .wrapper {
+        max-width: 1400px;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .nav__toggle {
+            display: none;
+        }
+    
+        .nav__list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            background-color: inherit;
+
+            .nav__item {
+                padding: 0 $spacing;
+    
+                .nav__link {
+                    color: $grayishviolet;
+
+                    &:hover {
+                        color: $darkviolet;
+                        cursor: pointer;
+                    }
+
+                    &:focus {
+                        outline: 1px dotted black;
+                    }
+                }
+            }
+        }
+
+        .nav__pattern {
+            display: none;
+        }
+    }
+
+        .jumbotron__image {
+            display: none;
+        }
+
+        .jumbotron__pattern {
+            display: none;
+        }
+
+        .jumbotron__detail {
+            text-align: left;
+            max-width: 680px;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                transform: translate(35px, 60px);
+                background-color: $grayishviolet;
+                width: 150px;
+                height: 2px;
+            }
+        }
+
+
+   
+}

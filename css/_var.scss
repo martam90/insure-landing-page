@@ -24,7 +24,7 @@ $spacing: 20px;
 @mixin headinglarge {
     letter-spacing: 2px;
     margin: 0;
-    font-size: $fontsize + 16;
+    font-size: clamp(2rem, 3vw, 4rem),
 }
 
 @mixin whitebutton {
