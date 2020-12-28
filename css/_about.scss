@@ -4,11 +4,21 @@
 
 
     .about__content {
+        max-width: 600px;
+        position: relative;
+        overflow: hidden;
         padding: $spacing + 30;
         background-color: $darkviolet;
-        background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
-        background-repeat: no-repeat;
-        background-position: top right;
+
+        .pattern--mobile {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .pattern--desktop {
+            display: none;
+        }
 
         .heading--large {
             color: white;

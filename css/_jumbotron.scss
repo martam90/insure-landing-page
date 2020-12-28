@@ -2,25 +2,35 @@
     background-color: $darkviolet;
     text-align: center;
 
-    .jumbotron__image {
+    .image--mobile {
+        display: block;
         width: 100%;
+    }
+
+    .image--desktop {
+        display: none;
     }
 
     .jumbotron__detail {
         position: relative;
         padding: $spacing + 80 $spacing + 15;
 
-        .pattern--top-left {
+        .pattern--mobile--left {
             position: absolute;
             top: 0;
             left: 0;
         }
 
-        .pattern--bottom-right {
+        .pattern--mobile--right {
             position: absolute;
             bottom: 0;
             right: 0;
             transform: translateY(50%);
+        }
+
+        .pattern--desktop--right,
+        .pattern--desktop--left {
+            display: none;
         }
     }
 

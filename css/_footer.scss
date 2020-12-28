@@ -6,9 +6,6 @@ footer {
         position: relative;
         text-align: center;
         padding: $spacing + 30 0;
-        background-image: url("../images/bg-pattern-footer-mobile.svg");
-        background-repeat: no-repeat;
-        background-position: top;
 
         &::after {
             content: "";
@@ -20,6 +17,16 @@ footer {
             width: 80%;
             height: 1px;
             transform: translateX(-50%);
+        }
+
+        .pattern--mobile {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .pattern--desktop {
+            display: none;
         }
 
         .icon__list {
@@ -39,6 +46,8 @@ footer {
                 }
             }
         }
+
+
     }
 
     .footer__menu {
