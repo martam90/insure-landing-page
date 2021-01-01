@@ -8,13 +8,20 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: $spacing + 15;
 
-    .nav__toggle {
+    .nav__open,
+    .nav__close {
       display: none;
+    }
+
+    .nav__top {
+      padding: 0;
     }
 
     .nav__list {
       display: flex;
+      align-items: center;
       flex-direction: row;
       flex-wrap: nowrap;
       background-color: inherit;
@@ -34,148 +41,157 @@
             outline: 1px dotted black;
           }
         }
+
+        &.item--border {
+            border: 2px solid $darkviolet;
+            padding: $spacing - 10;
+            }
+        }
       }
     }
 
     .nav__pattern {
       display: none;
     }
-  }
 
-  .jumbotron {
-      position: relative;
-      display: flex;
-
-    .image--mobile {
-        display: none;
-    }
-
-    .image--desktop {
-        display: block;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        transform: translateX(-30%);
-    }
-
-
-    .jumbotron__detail {
-        align-self: center;
-        text-align: left;
-        max-width: 680px;
+    .jumbotron {
         position: relative;
+        display: flex;
+
+      .image--mobile {
+          display: none;
+      }
+
+      .image--desktop {
+          display: block;
+          position: absolute;
+          top: 60px;
+          right: 0;
+          transform: translateX(-30%);
+      }
+
+
+      .jumbotron__detail {
+          align-self: center;
+          text-align: left;
+          max-width: 680px;
+          position: relative;
+
+          &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          transform: translate(35px, 60px);
+          background-color: $grayishviolet;
+          width: 150px;
+          height: 2px;
+          }
+
+          .pattern--desktop--right,
+          .pattern--desktop--left {
+              display: block;
+          }
+
+          .pattern--desktop--right {
+              position: absolute;
+              top: 0;
+              right: 0;
+              transform: translate(200%, -10%);
+          }
+
+          .pattern--desktop--left {
+              position: absolute;
+              top: 0;
+              left: 0;
+              transform: translateY(50%);
+          }
+
+          .pattern--mobile--left,
+          .pattern--mobile--right {
+              display: none;
+          }
+          }
+      }
+
+    .icons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      text-align: left;
+      margin-top: $spacing + 200;
+
+      .icons__heading {
+        grid-column: 1 / 4;
 
         &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        transform: translate(35px, 60px);
-        background-color: $grayishviolet;
-        width: 150px;
-        height: 2px;
+          position: absolute;
+          left: 0;
+          top: -20%;
+          transform: translateX(0);
         }
-
-        .pattern--desktop--right,
-        .pattern--desktop--left {
-            display: block;
-        }
-
-        .pattern--desktop--right {
-            width: 50%;
-            position: absolute;
-            top: 0;
-            right: 0;
-            transform: translate(200%, -10%);
-        }
-
-        .pattern--desktop--left {
-            position: absolute;
-            top: 0;
-            left: 0;
-            transform: translateY(50%);
-        }
-
-        .pattern--mobile--left,
-        .pattern--mobile--right {
-            display: none;
-        }
-        }
-    }
-
-  .icons {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
-    text-align: left;
-    margin-top: $spacing + 200;
-
-    .icons__heading {
-      grid-column: 1 / 4;
-
-      &::before {
-        position: absolute;
-        left: 0;
-        top: -20%;
-        transform: translateX(0);
       }
     }
-  }
 
-  .about {
-    .about__content {
-      max-width: 1400px;
-      padding: $spacing + 50;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .about {
+      .about__content {
+        max-width: 1400px;
+        padding: $spacing + 50;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-      .pattern--mobile {
-        display: none;
+        .pattern--mobile {
+          display: none;
+        }
+
+        .pattern--desktop {
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+
+        .about__button {
+          margin-top: 0;
+          z-index: 1;
+        }
+      }
+    }
+
+    footer {
+      padding: $spacing + 15;
+
+      .footer__icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &::after {
+          width: 100%;
+        }
+
+        .pattern--mobile {
+          display: none;
+        }
+
+        .pattern--desktop {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translate(-10%, -15%);
+        }
       }
 
-      .pattern--desktop {
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 0;
-      }
-
-      .about__button {
-        margin-top: 0;
-        z-index: 1;
+      .footer__menu {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        gap: $spacing - 10;
+        text-align: left;
       }
     }
   }
 
-  footer {
-    .footer__icons {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
 
-      &::after {
-        width: 100%;
-      }
-
-      .pattern--mobile {
-        display: none;
-      }
-
-      .pattern--desktop {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-    }
-
-    .footer__menu {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: auto;
-      gap: $spacing - 10;
-      text-align: left;
-    }
-  }
-}

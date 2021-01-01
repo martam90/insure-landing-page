@@ -32,6 +32,8 @@ $spacing: 20px;
     display: inline-block;
     border: 2px solid white;
     padding: $spacing - 5;
+    width: 10em;
+    text-align: center;
     outline: none;
     text-transform: uppercase;
     cursor: pointer;

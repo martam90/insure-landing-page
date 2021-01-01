@@ -12,25 +12,50 @@
         align-items: center;
         padding: $spacing + 15;
 
-        .nav__toggle {
+        .nav__open {
             border: none;
             outline: none;
             background-color: transparent;
             cursor: pointer;
+
+            &.active {
+                display: none;
+            }
+        }
+
+        .nav__close {
+            display: none;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            cursor: pointer;
+
+            &.active {
+                display: block;
+            }
         }
     }
 
     .nav__list {
-        display: flex;
+        display: none;
         flex-direction: column;
-        padding: 0;
+        padding: $spacing;
         margin: 0;
         list-style: none;
         background-color: $verydark;
 
+        &.active {
+            display: flex;
+        }
+
         .nav__item {
-            padding: $spacing + 10 0;
+            padding: $spacing 0;
+            margin: $spacing - 10 0;
             text-align: center;
+
+            &:last-child {
+                border: 2px solid white;
+            }
 
             .nav__link {
                 color: white;
@@ -40,4 +65,19 @@
             }
         }
     }
+
+    .nav__bottom {
+        display: none;
+        background-color: $verydark;
+
+        .nav__pattern {
+            display: block;
+            width: 100%;
+        }
+
+        &.active {
+            display: block;
+        }
+    }
+
 }

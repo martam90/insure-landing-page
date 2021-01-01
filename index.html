@@ -17,25 +17,27 @@
       <nav class="nav" role="navigation">
         <div class="nav__top">
           <a href="#"><img class="nav__brand" src="images/logo.svg" alt="logo insure"></a>
-        <button class="nav__toggle"><img class="nav__icon" src="images/icon-hamburger.svg" alt="hamburger menu"></button>
-        </div>
+        <button class="nav__open"><img class="nav__icon" src="images/icon-hamburger.svg" alt="open menu"></button>
+        <button class="nav__close"><img class="nav__icon" src="images/icon-close.svg" alt="close menu"></button>
+      </div>
         
         <ul class="nav__list">
           <li class="nav__item"><a class="nav__link" href="#">How we work</a></li>
           <li class="nav__item"><a class="nav__link" href="#">Blog</a></li>
           <li class="nav__item"><a class="nav__link" href="#">Account</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">View plans</a></li>
-          <img class="nav__pattern" src="images/bg-pattern-mobile-nav.svg" alt="nav pattern">
+          <li class="nav__item item--border"><a class="nav__link" href="#">View plans</a></li>
         </ul>
+        <div class="nav__bottom">
+          <img class="nav__pattern" src="images/bg-pattern-mobile-nav.svg" alt="nav pattern">
+        </div>
       </nav>
     </header>
 
     <main role="main">
       <section class="jumbotron">
-
         <img class="jumbotron__image-intro image--mobile" src="images/image-intro-mobile.jpg" alt="people">
         <img class="jumbotron__image-intro image--desktop" src="images/image-intro-desktop.jpg" alt="people">
-
+        
         <div class="jumbotron__detail">
           <img class="jumbotron__pattern pattern--mobile--left" src="images/bg-pattern-intro-left-mobile.svg" alt="top left pattern">
           <img class="jumbotron__pattern pattern--desktop--left" src="images/bg-pattern-intro-left-desktop.svg" alt="top left pattern">
@@ -94,39 +96,40 @@
 
     <footer>
       <div class="footer__icons">
-        <a href="#"><img class="footer__brand" src="images/logo.svg" alt="logo insure"></a>
-        <ul class="icon__list">
-          <li class="icon__item"><img class="icon__img" src="images/icon-facebook.svg" alt="icon fb"></li>
-          <li class="icon__item"><img class="icon__img" src="images/icon-twitter.svg" alt="icon tw"></li>
-          <li class="icon__item"><img class="icon__img" src="images/icon-pinterest.svg" alt="icon icon-pinterest"></li>
-          <li class="icon__item"><img class="icon__img" src="images/icon-instagram.svg" alt="icon icon-instagram"></li>
-        </ul>
-        <img class="footer__pattern pattern--mobile" src="images/bg-pattern-footer-mobile.svg" alt="pattern mobile">
-        <img class="footer__pattern pattern--desktop" src="images/bg-pattern-footer-desktop.svg" alt="pattern desktop">
-    </div>
+          <img class="footer__pattern pattern--mobile" src="images/bg-pattern-footer-mobile.svg" alt="pattern mobile">
+          <img class="footer__pattern pattern--desktop" src="images/bg-pattern-footer-desktop.svg" alt="pattern desktop">
+        
+          <a href="#"><img class="footer__brand" src="images/logo.svg" alt="logo insure"></a>
+          <ul class="icon__list">
+            <li class="icon__item"><img class="icon__img" src="images/icon-facebook.svg" alt="icon fb"></li>
+            <li class="icon__item"><img class="icon__img" src="images/icon-twitter.svg" alt="icon tw"></li>
+            <li class="icon__item"><img class="icon__img" src="images/icon-pinterest.svg" alt="icon icon-pinterest"></li>
+            <li class="icon__item"><img class="icon__img" src="images/icon-instagram.svg" alt="icon icon-instagram"></li>
+          </ul>
+        </div>
 
-    <div class="footer__menu">
+      <div class="footer__menu">
 
-      <div class="footer__detail">
-        <h5 class="footer__heading heading--small">Our company</h5>
-        <ul class="footer__list">
-          <li class="footer__item"><a class="footer__link" href="#">How we work</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">Why Insure?</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">View plans</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">Reviews</a></li>
-        </ul>
-      </div>
+        <div class="footer__detail">
+          <h5 class="footer__heading heading--small">Our company</h5>
+          <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link" href="#">How we work</a></li>
+            <li class="footer__item"><a class="footer__link" href="#">Why Insure?</a></li>
+            <li class="footer__item"><a class="footer__link" href="#">View plans</a></li>
+            <li class="footer__item"><a class="footer__link" href="#">Reviews</a></li>
+          </ul>
+        </div>
 
 
-      <div class="footer__detail">
-        <h5 class="footer__heading heading--small">Help me</h5>
-        <ul class="footer__list">
-          <li class="footer__item"><a class="footer__link" href="#">FAQ</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">Terms of use</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">Privacy policy</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">Cookies</a></li>
-        </ul>
-      </div>
+        <div class="footer__detail">
+          <h5 class="footer__heading heading--small">Help me</h5>
+          <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link" href="#">FAQ</a></li>
+            <li class="footer__item"><a class="footer__link" href="#">Terms of use</a></li>
+            <li class="footer__item"><a class="footer__link" href="#">Privacy policy</a></li>
+            <li class="footer__item"><a class="footer__link" href="#">Cookies</a></li>
+          </ul>
+        </div>
 
       <div class="footer__detail">
         <h5 class="footer__heading heading--small">Contact</h5>
@@ -155,6 +158,6 @@
 
     </footer> 
   </div>  
-  
+  <script src="menu.js"></script>
 </body>
 </html>
