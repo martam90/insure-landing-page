@@ -459,21 +459,30 @@ footer .attribution {
     background-color: inherit;
   }
   .nav .nav__list .nav__item {
-    padding: 0 20px;
+    padding: 10px 20px;
+    margin: 0;
+  }
+  .nav .nav__list .nav__item:hover {
+    cursor: pointer;
+  }
+  .nav .nav__list .nav__item:hover .nav__link {
+    color: #2d2640;
+  }
+  .nav .nav__list .nav__item:focus {
+    outline: 1px dotted black;
   }
   .nav .nav__list .nav__item .nav__link {
     color: #837d87;
   }
-  .nav .nav__list .nav__item .nav__link:hover {
-    color: #2d2640;
-    cursor: pointer;
-  }
-  .nav .nav__list .nav__item .nav__link:focus {
-    outline: 1px dotted black;
-  }
-  .nav .nav__list .nav__item.item--border {
+  .nav .nav__list .nav__item.highlited--nav-item {
     border: 2px solid #2d2640;
     padding: 10px;
+  }
+  .nav .nav__list .nav__item.highlited--nav-item:hover {
+    background-color: #2d2640;
+  }
+  .nav .nav__list .nav__item.highlited--nav-item:hover .nav__link {
+    color: #fafafa;
   }
   .nav__pattern {
     display: none;
