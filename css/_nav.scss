@@ -1,83 +1,82 @@
 .wrapper {
-    max-width: 640px;
+  max-width: 900px;
 }
 
 .nav {
+  display: flex;
+  flex-direction: column;
+
+  .nav__top {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing + 15;
+
+    .nav__open {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      cursor: pointer;
+
+      &.active {
+        display: none;
+      }
+    }
+
+    .nav__close {
+      display: none;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      cursor: pointer;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+
+  .nav__list {
+    display: none;
     flex-direction: column;
+    padding: $spacing;
+    margin: 0;
+    list-style: none;
+    background-color: $verydark;
 
-    .nav__top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: $spacing + 15;
-
-        .nav__open {
-            border: none;
-            outline: none;
-            background-color: transparent;
-            cursor: pointer;
-
-            &.active {
-                display: none;
-            }
-        }
-
-        .nav__close {
-            display: none;
-            border: none;
-            outline: none;
-            background-color: transparent;
-            cursor: pointer;
-
-            &.active {
-                display: block;
-            }
-        }
+    &.active {
+      display: flex;
     }
 
-    .nav__list {
-        display: none;
-        flex-direction: column;
-        padding: $spacing;
-        margin: 0;
-        list-style: none;
-        background-color: $verydark;
+    .nav__item {
+      padding: $spacing 0;
+      margin: $spacing - 10 0;
+      text-align: center;
 
-        &.active {
-            display: flex;
-        }
+      &:last-child {
+        border: 2px solid white;
+      }
 
-        .nav__item {
-            padding: $spacing 0;
-            margin: $spacing - 10 0;
-            text-align: center;
+      .nav__link {
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    }
+  }
 
-            &:last-child {
-                border: 2px solid white;
-            }
+  .nav__bottom {
+    display: none;
+    background-color: $verydark;
 
-            .nav__link {
-                color: white;
-                text-transform: uppercase;
-                text-decoration: none;
-                font-weight: 700;
-            }
-        }
+    .nav__pattern {
+      display: block;
+      width: 100%;
     }
 
-    .nav__bottom {
-        display: none;
-        background-color: $verydark;
-
-        .nav__pattern {
-            display: block;
-            width: 100%;
-        }
-
-        &.active {
-            display: block;
-        }
+    &.active {
+      display: block;
     }
-
+  }
 }

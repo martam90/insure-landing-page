@@ -1,163 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Frontend Mentor | Insure landing page</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Frontend Mentor | Insure landing page</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <nav class="nav" role="navigation">
+          <div class="nav__top">
+            <a href="#"
+              ><img class="nav__brand" src="images/logo.svg" alt="logo insure"
+            /></a>
+            <button class="nav__open">
+              <img
+                class="nav__icon"
+                src="images/icon-hamburger.svg"
+                alt="open menu"
+              />
+            </button>
+            <button class="nav__close">
+              <img
+                class="nav__icon"
+                src="images/icon-close.svg"
+                alt="close menu"
+              />
+            </button>
+          </div>
 
-  <div class="wrapper">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#">How we work</a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#">Blog</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Account</a></li>
+            <li class="nav__item highlited--nav-item">
+              <a class="nav__link" href="#">View plans</a>
+            </li>
+          </ul>
+          <div class="nav__bottom">
+            <img
+              class="nav__pattern"
+              src="images/bg-pattern-mobile-nav.svg"
+              alt="nav pattern"
+            />
+          </div>
+        </nav>
+      </header>
 
-    <header>
-      <nav class="nav" role="navigation">
-        <div class="nav__top">
-          <a href="#"><img class="nav__brand" src="images/logo.svg" alt="logo insure"></a>
-        <button class="nav__open"><img class="nav__icon" src="images/icon-hamburger.svg" alt="open menu"></button>
-        <button class="nav__close"><img class="nav__icon" src="images/icon-close.svg" alt="close menu"></button>
-      </div>
-        
-        <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="#">How we work</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Blog</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Account</a></li>
-          <li class="nav__item highlited--nav-item"><a class="nav__link" href="#">View plans</a></li>
-        </ul>
-        <div class="nav__bottom">
-          <img class="nav__pattern" src="images/bg-pattern-mobile-nav.svg" alt="nav pattern">
+      <main role="main">
+        <section class="jumbotron">
+          <img
+            class="jumbotron__pattern pattern--desktop--left"
+            src="images/bg-pattern-intro-left-desktop.svg"
+            alt="top left pattern"
+          />
+          <img
+            class="jumbotron__image-intro image--mobile"
+            src="images/image-intro-mobile.jpg"
+            alt="people"
+          />
+
+          <div class="pattern__clipping">
+            <img
+              class="jumbotron__pattern pattern--desktop--right"
+              src="images/bg-pattern-intro-right-desktop.svg"
+              alt="bottom right pattern"
+            />
+          </div>
+
+          <div class="jumbotron__detail">
+            <img
+              class="jumbotron__pattern pattern--mobile--right"
+              src="images/bg-pattern-intro-right-mobile.svg"
+              alt="bottom right pattern"
+            />
+            <img
+              class="jumbotron__pattern pattern--mobile--left"
+              src="images/bg-pattern-intro-left-mobile.svg"
+              alt="top left pattern"
+            />
+            <div class="jumbotron__detail--left">
+              <h1 class="jumbotron__heading heading--large">
+                Humanizing your insurance.
+              </h1>
+              <p class="jumbotron__text text--greyish">
+                Get your life insurance coverage easier and faster. We blend our
+                expertise and technology to help you find the plan that’s right
+                for you. Ensure you and your loved ones are protected.
+              </p>
+              <button type="button" class="jumbotron__button">
+                View plans
+              </button>
+            </div>
+            <div class="jumbotron__detail--right">
+              <img
+                class="jumbotron__image-intro image--desktop"
+                src="images/image-intro-desktop.jpg"
+                alt="people"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="icons">
+          <h1 class="icons__heading heading--large--black">We’re different</h1>
+          <div class="icons__item">
+            <img
+              src="images/icon-snappy-process.svg"
+              alt="snappy proccess icon"
+            />
+            <h3 class="icons__heading heading--medium">Snappy Process</h3>
+            <p class="icons__text text--grey">
+              Our application process can be completed in minutes, not hours.
+              Don’t get stuck filling in tedious forms.
+            </p>
+          </div>
+
+          <div class="icons__item">
+            <img
+              src="images/icon-affordable-prices.svg"
+              alt="icon-affordable-prices"
+            />
+            <h3 class="icons__heading heading--medium">Affordable Prices</h3>
+            <p class="icons__text text--grey">
+              We don’t want you worrying about high monthly costs. Our prices
+              may be low, but we still offer the best coverage possible.
+            </p>
+          </div>
+
+          <div class="icons__item">
+            <img src="images/icon-people-first.svg" alt="icon people first" />
+            <h3 class="icons__heading heading--medium">People First</h3>
+            <p class="icons__text text--grey">
+              Our plans aren’t full of conditions and clauses to prevent
+              payouts. We make sure you’re covered when you need it.
+            </p>
+          </div>
+        </section>
+
+        <section class="about">
+          <div class="about__content">
+            <h1 class="about__heading heading--large">
+              Find out more about how we work
+            </h1>
+            <button class="about__button" type="button">How we work</button>
+            <img
+              class="about_pattern pattern--mobile"
+              src="images/bg-pattern-how-we-work-mobile.svg"
+              alt="pattern mobile"
+            />
+            <img
+              class="about_pattern pattern--desktop"
+              src="images/bg-pattern-how-we-work-desktop.svg"
+              alt="pattern-desktop"
+            />
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <img
+          class="footer__pattern pattern--desktop"
+          src="images/bg-pattern-footer-desktop.svg"
+          alt="pattern desktop"
+        />
+
+        <div class="footer__icons">
+          <img
+            class="footer__pattern pattern--mobile"
+            src="images/bg-pattern-footer-mobile.svg"
+            alt="pattern mobile"
+          />
+
+          <a href="#"
+            ><img class="footer__brand" src="images/logo.svg" alt="logo insure"
+          /></a>
+          <ul class="icon__list">
+            <li class="icon__item">
+              <img
+                class="icon__img"
+                src="images/icon-facebook.svg"
+                alt="icon fb"
+              />
+            </li>
+            <li class="icon__item">
+              <img
+                class="icon__img"
+                src="images/icon-twitter.svg"
+                alt="icon tw"
+              />
+            </li>
+            <li class="icon__item">
+              <img
+                class="icon__img"
+                src="images/icon-pinterest.svg"
+                alt="icon icon-pinterest"
+              />
+            </li>
+            <li class="icon__item">
+              <img
+                class="icon__img"
+                src="images/icon-instagram.svg"
+                alt="icon icon-instagram"
+              />
+            </li>
+          </ul>
         </div>
-      </nav>
-    </header>
 
-    <main role="main">
-      <section class="jumbotron">
-        <img class="jumbotron__image-intro image--mobile" src="images/image-intro-mobile.jpg" alt="people">
-        <img class="jumbotron__image-intro image--desktop" src="images/image-intro-desktop.jpg" alt="people">
-        
-        <div class="jumbotron__detail">
-          <img class="jumbotron__pattern pattern--mobile--left" src="images/bg-pattern-intro-left-mobile.svg" alt="top left pattern">
-          <img class="jumbotron__pattern pattern--desktop--left" src="images/bg-pattern-intro-left-desktop.svg" alt="top left pattern">
-          <h1 class="jumbotron__heading heading--large">Humanizing your insurance.</h1>
-          <p class="jumbotron__text text--greyish">Get your life insurance coverage easier and faster. We blend our expertise 
-            and technology to help you find the plan that’s right for you. Ensure you 
-            and your loved ones are protected.</p>
-            <button type="button" class="jumbotron__button">View plans</button>
-          <div class="jumbotron__detail__images">
-          <img class="jumbotron__pattern pattern--mobile--right" src="images/bg-pattern-intro-right-mobile.svg" alt="bottom right pattern">
-          <img class="jumbotron__pattern pattern--desktop--right"src="images/bg-pattern-intro-right-desktop.svg" alt="bottom right pattern">
+        <div class="footer__menu">
+          <div class="footer__detail">
+            <h5 class="footer__heading heading--small">Our company</h5>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">How we work</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Why Insure?</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">View plans</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Reviews</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__detail">
+            <h5 class="footer__heading heading--small">Help me</h5>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">FAQ</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Terms of use</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Privacy policy</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Cookies</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__detail">
+            <h5 class="footer__heading heading--small">Contact</h5>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">Sales</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Support</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Live chat</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__detail">
+            <h5 class="footer__heading heading--small">Others</h5>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">Careers</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Press</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Licenses</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
 
-      <section class="icons">
-        <h1 class="icons__heading heading--large--black">We’re different</h1>
-        <div class="icons__item">
-          <img src="images/icon-snappy-process.svg" alt="snappy proccess icon">
-          <h3 class="icons__heading heading--medium">Snappy Process</h3>
-          <p class="icons__text text--grey">
-            Our application process can be completed in minutes, not hours. Don’t get 
-            stuck filling in tedious forms.
-          </p>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Marta</a>.
         </div>
-
-        <div class="icons__item">
-          <img src="images/icon-affordable-prices.svg" alt="icon-affordable-prices">
-          <h3 class="icons__heading heading--medium">Affordable Prices</h3>
-          <p class="icons__text text--grey">
-            We don’t want you worrying about high monthly costs. Our prices may be low, 
-            but we still offer the best coverage possible.
-          </p>
-        </div>
-
-        <div class="icons__item">
-          <img src="images/icon-people-first.svg" alt="icon people first">
-          <h3 class="icons__heading heading--medium">People First</h3>
-          <p class="icons__text text--grey">
-            Our plans aren’t full of conditions and clauses to prevent payouts. We make 
-            sure you’re covered when you need it.
-          </p>
-        </div>
-      </section>
-
-      <section class="about">
-        <div class="about__content">
-          <h1 class="about__heading heading--large">Find out more about how we work</h1>
-          <button class="about__button" type="button">How we work</button> 
-          <img class="about_pattern pattern--mobile" src="images/bg-pattern-how-we-work-mobile.svg" alt="pattern mobile">
-          <img class="about_pattern pattern--desktop" src="images/bg-pattern-how-we-work-desktop.svg" alt="pattern-desktop">
-        </div>
-      </section>
-
-    </main>
-
-    <footer>
-      <div class="footer__icons">
-          <img class="footer__pattern pattern--mobile" src="images/bg-pattern-footer-mobile.svg" alt="pattern mobile">
-          <img class="footer__pattern pattern--desktop" src="images/bg-pattern-footer-desktop.svg" alt="pattern desktop">
-        
-          <a href="#"><img class="footer__brand" src="images/logo.svg" alt="logo insure"></a>
-          <ul class="icon__list">
-            <li class="icon__item"><img class="icon__img" src="images/icon-facebook.svg" alt="icon fb"></li>
-            <li class="icon__item"><img class="icon__img" src="images/icon-twitter.svg" alt="icon tw"></li>
-            <li class="icon__item"><img class="icon__img" src="images/icon-pinterest.svg" alt="icon icon-pinterest"></li>
-            <li class="icon__item"><img class="icon__img" src="images/icon-instagram.svg" alt="icon icon-instagram"></li>
-          </ul>
-        </div>
-
-      <div class="footer__menu">
-
-        <div class="footer__detail">
-          <h5 class="footer__heading heading--small">Our company</h5>
-          <ul class="footer__list">
-            <li class="footer__item"><a class="footer__link" href="#">How we work</a></li>
-            <li class="footer__item"><a class="footer__link" href="#">Why Insure?</a></li>
-            <li class="footer__item"><a class="footer__link" href="#">View plans</a></li>
-            <li class="footer__item"><a class="footer__link" href="#">Reviews</a></li>
-          </ul>
-        </div>
-
-
-        <div class="footer__detail">
-          <h5 class="footer__heading heading--small">Help me</h5>
-          <ul class="footer__list">
-            <li class="footer__item"><a class="footer__link" href="#">FAQ</a></li>
-            <li class="footer__item"><a class="footer__link" href="#">Terms of use</a></li>
-            <li class="footer__item"><a class="footer__link" href="#">Privacy policy</a></li>
-            <li class="footer__item"><a class="footer__link" href="#">Cookies</a></li>
-          </ul>
-        </div>
-
-      <div class="footer__detail">
-        <h5 class="footer__heading heading--small">Contact</h5>
-        <ul class="footer__list">
-          <li class="footer__item"><a class="footer__link" href="#">Sales</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">Support</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">Live chat</a></li>
-        </ul>
-      </div>
-
-      <div class="footer__detail">
-        <h5 class="footer__heading heading--small">Others</h5>
-        <ul class="footer__list">
-          <li class="footer__item"><a class="footer__link" href="#">Careers</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">Press</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">Licenses</a></li>
-        </ul>
-      </div>
-
+      </footer>
     </div>
-
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Marta</a>.
-    </div>
-
-    </footer> 
-  </div>  
-  <script src="menu.js"></script>
-</body>
+    <script src="menu.js"></script>
+  </body>
 </html>

@@ -1,7 +1,7 @@
 /* font family */
-$ffamily: 'Karla', sans-serif; /* body */
+$ffamily: "Karla", sans-serif; /* body */
 
-$fontheading: 'DM Serif Display', serif;
+$fontheading: "DM Serif Display", serif;
 
 $fontsize: 16px;
 
@@ -14,39 +14,40 @@ $verydark: hsl(270, 9%, 17%);
 $grayishviolet: hsl(273, 4%, 51%);
 $lightgray: hsl(0, 0%, 98%);
 
-
 /* spacing */
 
 $spacing: 20px;
 
+$contentpadding: $spacing + 80;
+
 /* mixin heading large */
 
 @mixin headinglarge {
-    letter-spacing: 2px;
-    margin: 0;
-    font-size: clamp(2rem, 3vw, 4rem),
+  letter-spacing: 2px;
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 4rem);
 }
 
 @mixin whitebutton {
-    margin-top: $spacing;
-    display: inline-block;
-    border: 2px solid white;
-    padding: $spacing - 5;
-    width: 10em;
-    text-align: center;
-    outline: none;
-    text-transform: uppercase;
-    cursor: pointer;
-    background-color: inherit;
-    color: white;
-    font-family: $ffamily;
-    transition: all ease-in-out 500ms;
+  margin-top: $spacing;
+  display: inline-block;
+  border: 2px solid white;
+  padding: $spacing - 5;
+  width: 10em;
+  text-align: center;
+  outline: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: inherit;
+  color: white;
+  font-family: $ffamily;
+  transition: all ease-in-out 500ms;
 }
 
 @mixin activebutton {
-    transition: all ease-in-out 500ms;
-    background-color: white;
-    cursor: pointer;
-    color: $darkviolet;
-    font-weight: 700;
+  transition: all ease-in-out 500ms;
+  background-color: white;
+  cursor: pointer;
+  color: $darkviolet;
+  font-weight: 700;
 }

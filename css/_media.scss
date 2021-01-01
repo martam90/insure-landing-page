@@ -1,6 +1,11 @@
-@media (min-width: 700px) {
+@media (min-width: 900px) {
   .wrapper {
     max-width: 1400px;
+  }
+
+  header,
+  main section {
+    padding: 0 $contentpadding;
   }
 
   .nav {
@@ -76,16 +81,44 @@
 
     .image--desktop {
       display: block;
+      width: 100%;
+    }
+
+    .pattern__clipping {
+      width: 100%;
+      height: 100%;
       position: absolute;
-      top: 60px;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+    }
+
+    .pattern--desktop--right,
+    .pattern--desktop--left {
+      display: block;
+      z-index: 99;
+    }
+
+    .pattern--desktop--right {
+      position: absolute;
+      top: 0;
       right: 0;
-      transform: translateX(-30%);
+    }
+
+    .pattern--desktop--left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(70%);
+    }
+
+    .pattern--mobile--left,
+    .pattern--mobile--right {
+      display: none;
     }
 
     .jumbotron__detail {
-      align-self: center;
       text-align: left;
-      max-width: 680px;
       position: relative;
 
       &::before {
@@ -99,28 +132,14 @@
         height: 2px;
       }
 
-      .pattern--desktop--right,
-      .pattern--desktop--left {
-        display: block;
+      .jumbotron__detail--right {
+        height: 0;
+        flex: 1;
       }
 
-      .pattern--desktop--right {
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(200%, -10%);
-      }
-
-      .pattern--desktop--left {
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translateY(50%);
-      }
-
-      .pattern--mobile--left,
-      .pattern--mobile--right {
-        display: none;
+      .jumbotron__detail--left {
+        padding-right: $spacing - 10;
+        flex: 1;
       }
     }
   }
@@ -129,8 +148,15 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
+    gap: $spacing;
     text-align: left;
     margin-top: $spacing + 200;
+    padding: $spacing + 40 $contentpadding;
+
+    .icons__item {
+      margin: 0;
+      padding: 0;
+    }
 
     .icons__heading {
       grid-column: 1 / 4;
@@ -145,6 +171,8 @@
   }
 
   .about {
+    padding: $spacing + 40 $contentpadding;
+
     .about__content {
       max-width: 1400px;
       padding: $spacing + 50;
@@ -171,7 +199,14 @@
   }
 
   footer {
-    padding: $spacing + 15;
+    padding: $spacing + 15 $contentpadding;
+
+    .pattern--desktop {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
 
     .footer__icons {
       display: flex;
@@ -184,14 +219,6 @@
 
       .pattern--mobile {
         display: none;
-      }
-
-      .pattern--desktop {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translate(-10%, -15%);
       }
     }
 

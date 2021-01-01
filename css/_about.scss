@@ -1,45 +1,41 @@
 .about {
-    padding: $spacing + 60 $spacing + 15;
-    text-align: center;
+  padding: $spacing + 60 $spacing + 15;
+  text-align: center;
 
+  .about__content {
+    max-width: 900px;
+    position: relative;
+    overflow: hidden;
+    padding: $spacing + 30;
+    background-color: $darkviolet;
 
-    .about__content {
-        max-width: 600px;
-        position: relative;
-        overflow: hidden;
-        padding: $spacing + 30;
-        background-color: $darkviolet;
-
-        .pattern--mobile {
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-
-        .pattern--desktop {
-            display: none;
-        }
-
-        .heading--large {
-            color: white;
-            letter-spacing: 2px;
-            margin: 0;
-            font-size: $fontsize + 16;
-        }
-    
-        .about__button {
-            @include whitebutton;
-
-            &:hover {
-                @include activebutton;
-            }
-
-            &:focus {
-                outline: 1px dotted white;
-            }
-        }
+    .pattern--mobile {
+      position: absolute;
+      right: 0;
+      top: 0;
     }
-    
 
-    
+    .pattern--desktop {
+      display: none;
+    }
+
+    .heading--large {
+      color: white;
+      letter-spacing: 2px;
+      margin: 0;
+      font-size: $fontsize + 16;
+    }
+
+    .about__button {
+      @include whitebutton;
+
+      &:hover {
+        @include activebutton;
+      }
+
+      &:focus {
+        outline: 1px dotted white;
+      }
+    }
+  }
 }
