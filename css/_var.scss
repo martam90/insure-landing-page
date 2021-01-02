@@ -14,18 +14,24 @@ $verydark: hsl(270, 9%, 17%);
 $grayishviolet: hsl(273, 4%, 51%);
 $lightgray: hsl(0, 0%, 98%);
 
+$grey: #837D88;
+
 /* spacing */
 
 $spacing: 20px;
 
 $contentpadding: $spacing + 80;
 
+/* transition */
+
+$transition: all ease-in-out 300ms;
+
 /* mixin heading large */
 
 @mixin headinglarge {
   letter-spacing: 2px;
   margin: 0;
-  font-size: clamp(2rem, 3vw, 4rem);
+  font-size: 3.8rem;
 }
 
 @mixin whitebutton {
@@ -41,7 +47,7 @@ $contentpadding: $spacing + 80;
   background-color: inherit;
   color: white;
   font-family: $ffamily;
-  transition: all ease-in-out 500ms;
+  transition: $transition;
 }
 
 @mixin activebutton {

@@ -2,6 +2,7 @@
 /* body */
 /* colors */
 /* spacing */
+/* transition */
 /* mixin heading large */
 html {
   -webkit-box-sizing: border-box;
@@ -29,10 +30,6 @@ h4,
 h5,
 h6 {
   font-family: "DM Serif Display", serif;
-}
-
-.wrapper {
-  max-width: 900px;
 }
 
 .nav {
@@ -105,15 +102,44 @@ h6 {
   text-align: center;
 }
 
-.nav .nav__list .nav__item:last-child {
+.nav .nav__list .nav__item:hover {
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+
+.nav .nav__list .nav__item.highlited--nav-item {
   border: 2px solid white;
 }
 
+.nav .nav__list .nav__item.highlited--nav-item:hover {
+  background-color: #fafafa;
+}
+
+.nav .nav__list .nav__item.highlited--nav-item:hover .nav__link {
+  color: #2d2640;
+}
+
+.nav .nav__list .nav__item.highlited--nav-item:focus {
+  outline: 2px dotted #fafafa;
+}
+
 .nav .nav__list .nav__item .nav__link {
+  display: block;
   color: white;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 700;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+
+.nav .nav__list .nav__item .nav__link:hover {
+  color: #837d87;
+}
+
+.nav .nav__list .nav__item .nav__link:hover:focus {
+  outline: 2px dotted #fafafa;
 }
 
 .nav .nav__bottom {
@@ -174,7 +200,7 @@ h6 {
 .jumbotron .heading--large {
   letter-spacing: 2px;
   margin: 0;
-  font-size: clamp(2rem, 3vw, 4rem);
+  font-size: 3.8rem;
   color: white;
 }
 
@@ -197,8 +223,8 @@ h6 {
   background-color: inherit;
   color: white;
   font-family: "Karla", sans-serif;
-  -webkit-transition: all ease-in-out 500ms;
-  transition: all ease-in-out 500ms;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
 }
 
 .jumbotron .jumbotron__button:hover {
@@ -226,7 +252,7 @@ h6 {
 .icons .heading--large--black {
   letter-spacing: 2px;
   margin: 0;
-  font-size: clamp(2rem, 3vw, 4rem);
+  font-size: 3.8rem;
   padding-bottom: 50px;
 }
 
@@ -263,7 +289,6 @@ h6 {
 }
 
 .about .about__content {
-  max-width: 900px;
   position: relative;
   overflow: hidden;
   padding: 50px;
@@ -280,7 +305,7 @@ h6 {
   display: none;
 }
 
-.about .about__content .heading--large {
+.about .about__content .heading--medium {
   color: white;
   letter-spacing: 2px;
   margin: 0;
@@ -300,8 +325,8 @@ h6 {
   background-color: inherit;
   color: white;
   font-family: "Karla", sans-serif;
-  -webkit-transition: all ease-in-out 500ms;
-  transition: all ease-in-out 500ms;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
 }
 
 .about .about__content .about__button:hover {
@@ -356,7 +381,8 @@ footer .footer__icons .pattern--mobile {
 
 footer .footer__icons .icon__list {
   list-style: none;
-  padding: 0;
+  padding-top: 20px;
+  padding-left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -371,6 +397,17 @@ footer .footer__icons .icon__list {
 
 footer .footer__icons .icon__list .icon__item {
   z-index: 99;
+}
+
+footer .footer__icons .icon__list svg {
+  margin-right: 10px;
+  fill: #837D88;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+
+footer .footer__icons .icon__list svg:hover {
+  fill: #2d2640;
 }
 
 footer .footer__icons .icon__list .icon__img {
@@ -391,10 +428,11 @@ footer .footer__menu .footer__detail {
 }
 
 footer .footer__menu .footer__detail .heading--small {
+  font-size: 12px;
   text-transform: uppercase;
-  color: #837d87;
+  color: #837D88;
   letter-spacing: 3px;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 footer .footer__menu .footer__list {
@@ -408,6 +446,7 @@ footer .footer__menu .footer__list .footer__item {
 }
 
 footer .footer__menu .footer__list .footer__link {
+  font-size: 12px;
   color: #2d2640;
   font-weight: 700;
   text-transform: uppercase;
@@ -428,9 +467,6 @@ footer .attribution {
 }
 
 @media (min-width: 900px) {
-  .wrapper {
-    max-width: 1400px;
-  }
   header,
   main section {
     padding: 0 100px;
@@ -449,7 +485,7 @@ footer .attribution {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 35px;
+    padding: 0 35px;
   }
   .nav .nav__open,
   .nav .nav__close {
@@ -487,6 +523,8 @@ footer .attribution {
     outline: 1px dotted black;
   }
   .nav .nav__list .nav__item .nav__link {
+    font-size: 12px;
+    letter-spacing: 3px;
     color: #837d87;
   }
   .nav .nav__list .nav__item.highlited--nav-item {

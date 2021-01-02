@@ -1,7 +1,4 @@
 @media (min-width: 900px) {
-  .wrapper {
-    max-width: 1400px;
-  }
 
   header,
   main section {
@@ -13,7 +10,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: $spacing + 15;
+    padding: 0 $spacing + 15;
 
     .nav__open,
     .nav__close {
@@ -48,6 +45,8 @@
         }
 
         .nav__link {
+          font-size: $fontsize - 4;
+          letter-spacing: 3px;
           color: $grayishviolet;
         }
 

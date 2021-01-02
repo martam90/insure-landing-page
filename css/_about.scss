@@ -3,7 +3,6 @@
   text-align: center;
 
   .about__content {
-    max-width: 900px;
     position: relative;
     overflow: hidden;
     padding: $spacing + 30;
@@ -19,7 +18,7 @@
       display: none;
     }
 
-    .heading--large {
+    .heading--medium {
       color: white;
       letter-spacing: 2px;
       margin: 0;

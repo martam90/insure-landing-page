@@ -33,7 +33,8 @@ footer {
 
     .icon__list {
       list-style: none;
-      padding: 0;
+      padding-top: $spacing;
+      padding-left: 0;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -41,6 +42,16 @@ footer {
 
       .icon__item {
         z-index: 99;
+      }
+
+      svg {
+        margin-right: $spacing - 10;
+        fill: $grey;
+        transition: $transition;
+
+        &:hover {
+          fill: $darkviolet;
+        }
       }
 
       .icon__img {
@@ -61,10 +72,11 @@ footer {
       margin-top: $spacing;
 
       .heading--small {
+        font-size: $fontsize - 4;
         text-transform: uppercase;
-        color: $grayishviolet;
+        color: $grey;
         letter-spacing: 3px;
-        font-weight: 400;
+        font-weight: 700;
       }
     }
 
@@ -78,6 +90,7 @@ footer {
       }
 
       .footer__link {
+        font-size: $fontsize - 4;
         color: $darkviolet;
         font-weight: 700;
         text-transform: uppercase;
