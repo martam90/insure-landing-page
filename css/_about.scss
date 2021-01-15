@@ -8,14 +8,11 @@
     padding: $spacing + 30;
     background-color: $darkviolet;
 
-    .pattern--mobile {
+    &::after {
+      content: url("../images/bg-pattern-how-we-work-mobile.svg");
       position: absolute;
-      right: 0;
       top: 0;
-    }
-
-    .pattern--desktop {
-      display: none;
+      right: 0;
     }
 
     .heading--medium {

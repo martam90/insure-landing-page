@@ -11,50 +11,51 @@
     display: none;
   }
 
-  .pattern--mobile--left {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .pattern--mobile--right {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: translateY(50%);
-  }
-
-  .pattern--desktop--right,
-  .pattern--desktop--left {
-    display: none;
-  }
-
   .jumbotron__detail {
     display: flex;
     position: relative;
     padding: $spacing + 80 $spacing + 15;
-  }
 
-  .heading--large {
-    @include headinglarge;
-    color: white;
-  }
-
-  .text--greyish {
-    color: $lightgray;
-    opacity: 0.7;
-    line-height: 1.8;
-  }
-
-  .jumbotron__button {
-    @include whitebutton;
-
-    &:hover {
-      @include activebutton;
+    &::before {
+      content: url("../images/bg-pattern-intro-left-mobile.svg");
+      position: absolute;
+      top: 0;
+      left: 0;
     }
 
-    &:focus {
-      outline: 1px dotted white;
+    &::after {
+      content: url("../images/bg-pattern-intro-right-mobile.svg");
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translateY(55%);
+    }
+
+    .jumbotron__heading {
+      width: 100%;
+
+      &.heading--large {
+        @include headinglarge;
+        color: white;
+      }
+    }
+
+    .text--greyish {
+      color: $lightgray;
+      opacity: 0.7;
+      line-height: 1.8;
+    }
+
+    .jumbotron__button {
+      @include whitebutton;
+
+      &:hover {
+        @include activebutton;
+      }
+
+      &:focus {
+        outline: 1px dotted white;
+      }
     }
   }
 }

@@ -1,5 +1,4 @@
 @media (min-width: 900px) {
-
   header,
   main section {
     padding: 0 $contentpadding;
@@ -74,6 +73,14 @@
     position: relative;
     display: flex;
 
+    &::before {
+      content: url("../images/bg-pattern-intro-left-desktop.svg");
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateY(70%);
+    }
+
     .image--mobile {
       display: none;
     }
@@ -81,39 +88,6 @@
     .image--desktop {
       display: block;
       width: 100%;
-    }
-
-    .pattern__clipping {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      overflow: hidden;
-    }
-
-    .pattern--desktop--right,
-    .pattern--desktop--left {
-      display: block;
-      z-index: 99;
-    }
-
-    .pattern--desktop--right {
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
-
-    .pattern--desktop--left {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: translateY(70%);
-    }
-
-    .pattern--mobile--left,
-    .pattern--mobile--right {
-      display: none;
     }
 
     .jumbotron__detail {
@@ -129,6 +103,14 @@
         background-color: $grayishviolet;
         width: 150px;
         height: 2px;
+      }
+
+      &::after {
+        content: url("../images/bg-desktop-p-right.svg");
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateX(20%);
       }
 
       .jumbotron__detail--right {
@@ -178,13 +160,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
 
-      .pattern--mobile {
-        display: none;
-      }
-
-      .pattern--desktop {
-        display: block;
+      &::after {
+        content: url("../images/bg-pattern-how-we-work-desktop.svg");
         position: absolute;
         right: 0;
         top: 0;
@@ -199,9 +178,10 @@
 
   footer {
     padding: $spacing + 15 $contentpadding;
+    position: relative;
 
-    .pattern--desktop {
-      display: block;
+    &::before {
+      content: url("../images/bg-pattern-footer-desktop.svg");
       position: absolute;
       top: 0;
       left: 0;
@@ -214,10 +194,6 @@
 
       &::after {
         width: 100%;
-      }
-
-      .pattern--mobile {
-        display: none;
       }
     }
 

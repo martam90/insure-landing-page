@@ -170,25 +170,6 @@ h6 {
   display: none;
 }
 
-.jumbotron .pattern--mobile--left {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.jumbotron .pattern--mobile--right {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
-}
-
-.jumbotron .pattern--desktop--right,
-.jumbotron .pattern--desktop--left {
-  display: none;
-}
-
 .jumbotron .jumbotron__detail {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -197,20 +178,40 @@ h6 {
   padding: 100px 35px;
 }
 
-.jumbotron .heading--large {
+.jumbotron .jumbotron__detail::before {
+  content: url("../images/bg-pattern-intro-left-mobile.svg");
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.jumbotron .jumbotron__detail::after {
+  content: url("../images/bg-pattern-intro-right-mobile.svg");
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translateY(55%);
+          transform: translateY(55%);
+}
+
+.jumbotron .jumbotron__detail .jumbotron__heading {
+  width: 100%;
+}
+
+.jumbotron .jumbotron__detail .jumbotron__heading.heading--large {
   letter-spacing: 2px;
   margin: 0;
-  font-size: 3.8rem;
+  font-size: 3rem;
   color: white;
 }
 
-.jumbotron .text--greyish {
+.jumbotron .jumbotron__detail .text--greyish {
   color: #fafafa;
   opacity: 0.7;
   line-height: 1.8;
 }
 
-.jumbotron .jumbotron__button {
+.jumbotron .jumbotron__detail .jumbotron__button {
   margin-top: 20px;
   display: inline-block;
   border: 2px solid white;
@@ -227,7 +228,7 @@ h6 {
   transition: all ease-in-out 300ms;
 }
 
-.jumbotron .jumbotron__button:hover {
+.jumbotron .jumbotron__detail .jumbotron__button:hover {
   -webkit-transition: all ease-in-out 500ms;
   transition: all ease-in-out 500ms;
   background-color: white;
@@ -236,7 +237,7 @@ h6 {
   font-weight: 700;
 }
 
-.jumbotron .jumbotron__button:focus {
+.jumbotron .jumbotron__detail .jumbotron__button:focus {
   outline: 1px dotted white;
 }
 
@@ -252,7 +253,7 @@ h6 {
 .icons .heading--large--black {
   letter-spacing: 2px;
   margin: 0;
-  font-size: 3.8rem;
+  font-size: 3rem;
   padding-bottom: 50px;
 }
 
@@ -295,14 +296,11 @@ h6 {
   background-color: #2d2640;
 }
 
-.about .about__content .pattern--mobile {
+.about .about__content::after {
+  content: url("../images/bg-pattern-how-we-work-mobile.svg");
   position: absolute;
-  right: 0;
   top: 0;
-}
-
-.about .about__content .pattern--desktop {
-  display: none;
+  right: 0;
 }
 
 .about .about__content .heading--medium {
@@ -346,16 +344,21 @@ footer {
   position: relative;
   background-color: #fafafa;
   text-align: center;
+  overflow: hidden;
 }
 
-footer .pattern--desktop {
-  display: none;
+footer::before {
+  content: url("../images/bg-pattern-footer-mobile.svg");
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 footer .footer__icons {
   position: relative;
   text-align: center;
   padding: 50px 0;
+  overflow: hidden;
 }
 
 footer .footer__icons::after {
@@ -369,14 +372,6 @@ footer .footer__icons::after {
   height: 1px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-}
-
-footer .footer__icons .pattern--mobile {
-  position: absolute;
-  left: 0;
-  top: 0;
-  -webkit-transform: translateX(-20%);
-          transform: translateX(-20%);
 }
 
 footer .footer__icons .icon__list {
@@ -401,7 +396,7 @@ footer .footer__icons .icon__list .icon__item {
 
 footer .footer__icons .icon__list svg {
   margin-right: 10px;
-  fill: #837D88;
+  fill: #837d88;
   -webkit-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
 }
@@ -430,7 +425,7 @@ footer .footer__menu .footer__detail {
 footer .footer__menu .footer__detail .heading--small {
   font-size: 12px;
   text-transform: uppercase;
-  color: #837D88;
+  color: #837d88;
   letter-spacing: 3px;
   font-weight: 700;
 }
@@ -546,41 +541,20 @@ footer .attribution {
     display: -ms-flexbox;
     display: flex;
   }
+  .jumbotron::before {
+    content: url("../images/bg-pattern-intro-left-desktop.svg");
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    -webkit-transform: translateY(70%);
+            transform: translateY(70%);
+  }
   .jumbotron .image--mobile {
     display: none;
   }
   .jumbotron .image--desktop {
     display: block;
     width: 100%;
-  }
-  .jumbotron .pattern__clipping {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-  }
-  .jumbotron .pattern--desktop--right,
-  .jumbotron .pattern--desktop--left {
-    display: block;
-    z-index: 99;
-  }
-  .jumbotron .pattern--desktop--right {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-  .jumbotron .pattern--desktop--left {
-    position: absolute;
-    top: 0;
-    left: 0;
-    -webkit-transform: translateY(70%);
-            transform: translateY(70%);
-  }
-  .jumbotron .pattern--mobile--left,
-  .jumbotron .pattern--mobile--right {
-    display: none;
   }
   .jumbotron .jumbotron__detail {
     text-align: left;
@@ -596,6 +570,14 @@ footer .attribution {
     background-color: #837d87;
     width: 150px;
     height: 2px;
+  }
+  .jumbotron .jumbotron__detail::after {
+    content: url("../images/bg-desktop-p-right.svg");
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transform: translateX(20%);
+            transform: translateX(20%);
   }
   .jumbotron .jumbotron__detail .jumbotron__detail--right {
     height: 0;
@@ -652,12 +634,10 @@ footer .attribution {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    position: relative;
   }
-  .about .about__content .pattern--mobile {
-    display: none;
-  }
-  .about .about__content .pattern--desktop {
-    display: block;
+  .about .about__content::after {
+    content: url("../images/bg-pattern-how-we-work-desktop.svg");
     position: absolute;
     right: 0;
     top: 0;
@@ -668,9 +648,10 @@ footer .attribution {
   }
   footer {
     padding: 35px 100px;
+    position: relative;
   }
-  footer .pattern--desktop {
-    display: block;
+  footer::before {
+    content: url("../images/bg-pattern-footer-desktop.svg");
     position: absolute;
     top: 0;
     left: 0;
@@ -688,9 +669,6 @@ footer .attribution {
   }
   footer .footer__icons::after {
     width: 100%;
-  }
-  footer .footer__icons .pattern--mobile {
-    display: none;
   }
   footer .footer__menu {
     display: -ms-grid;

@@ -2,15 +2,20 @@ footer {
   position: relative;
   background-color: $lightgray;
   text-align: center;
+  overflow: hidden;
 
-  .pattern--desktop {
-    display: none;
+  &::before {
+    content: url("../images/bg-pattern-footer-mobile.svg");
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .footer__icons {
     position: relative;
     text-align: center;
     padding: $spacing + 30 0;
+    overflow: hidden;
 
     &::after {
       content: "";
@@ -22,13 +27,6 @@ footer {
       width: 80%;
       height: 1px;
       transform: translateX(-50%);
-    }
-
-    .pattern--mobile {
-      position: absolute;
-      left: 0;
-      top: 0;
-      transform: translateX(-20%);
     }
 
     .icon__list {
